@@ -1,0 +1,58 @@
+Dependency Injection (DI) is a design pattern that removes the dependency from the programming code so that it can be easy to manage and test the application.
+ Dependency Injection makes our programming code loosely coupled. To understand the DI better, Let's understand the Dependency Lookup (DL) first
+ 
+Two ways to perform Dependency Injection in Spring framework
+Spring framework provides two ways to inject dependency
+1 ) By Constructor
+2 ) By Setter method
+
+Creational Design Patterns
+Creational design patterns provide solution to instantiate a object in the best possible way for specific situations.
+Singleton Pattern
+Singleton pattern restricts the instantiation of a class and ensures that only one instance of the class exists in the java virtual machine.
+It seems to be a very simple design pattern but when it comes to implementation, it comes with a lot of implementation concerns.
+The implementation of Singleton pattern has always been a controversial topic among developers. Check out Singleton Design Pattern to learn 
+about different ways to implement Singleton pattern and pros and cons of each of the method. This is one of the most discussed java design patterns.
+
+Factory Pattern
+Factory design pattern is used when we have a super class with multiple sub-classes and based on input, we need to return one of the sub-class. 
+This pattern take out the responsibility of instantiation of a class from client program to the factory class. We can apply Singleton pattern on 
+Factory class or make the factory method static. Check out Factory Design Pattern for example program and factory pattern benefits. 
+This is one of the most widely used java design pattern.
+
+Abstract Factory Pattern
+Abstract Factory pattern is similar to Factory pattern and it’s factory of factories. If you are familiar with factory design pattern in java,
+ you will notice that we have a single Factory class that returns the different sub-classes based on the input provided and factory class uses 
+ if-else or switch statement to achieve this.
+In Abstract Factory pattern, we get rid of if-else block and have a factory class for each sub-class and then an Abstract
+ Factory class that will return the sub-class based on the input factory class. Check out Abstract Factory Pattern to know how to implement this pattern with example program.
+ 
+ 
+Spring IoC Container
+Spring IoC is the mechanism to achieve loose-coupling between Objects dependencies. To achieve loose coupling and dynamic binding of the objects at runtime, 
+objects dependencies are injected by other assembler objects.
+AnnotationConfigApplicationContext: If we are using Spring in standalone java applications and using annotations for Configuration, 
+
+
+
+then we can use this to initialize the container and get the bean objects.
+ClassPathXmlApplicationContext: If we have spring bean configuration xml file in standalone application, then we can use this class to load the file and get the container object.
+FileSystemXmlApplicationContext: This is similar to ClassPathXmlApplicationContext except that the xml configuration file can be loaded from anywhere in the file system.
+AnnotationConfigWebApplicationContext and XmlWebApplicationContext for web applications.
+
+
+Binary Search in Java
+Binary search is used to search a key element from multiple elements. Binary search is faster than linear search.
+In case of binary search, array elements must be in ascending order. If you have unsorted array, you can sort the array using Arrays.sort(arr) method.
+
+What is transaction
+A transaction is a very small unit of a program and it may contain several lowlevel tasks.
+ A transaction in a database system must maintain Atomicity, Consistency, Isolation, and Durability - commonly known as ACID properties - 
+ in order to ensure accuracy, completeness, and data integ
+
+Developing with TDD has valuable advantages:
+You have a better understanding of a feature you implement.
+You have robust indicators of feature completeness.
+Code is covered with tests and has less chance to be corrupted by fixes or new features.
+The cost of these advantages is pretty high – inconvenience related to switching to a new development manner and time which you spend for developing each new feature. It’s a price of quality.
+So that’s how TDD works – write red unit tests, start implementing a feature, make the tests green, and refactor the code.
