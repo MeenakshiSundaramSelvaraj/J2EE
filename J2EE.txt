@@ -21,7 +21,7 @@ Factory class or make the factory method static. Check out Factory Design Patter
 This is one of the most widely used java design pattern.
 
 Abstract Factory Pattern
-Abstract Factory pattern is similar to Factory pattern and it’s factory of factories. If you are familiar with factory design pattern in java,
+Abstract Factory pattern is similar to Factory pattern and itâ€™s factory of factories. If you are familiar with factory design pattern in java,
  you will notice that we have a single Factory class that returns the different sub-classes based on the input provided and factory class uses 
  if-else or switch statement to achieve this.
 In Abstract Factory pattern, we get rid of if-else block and have a factory class for each sub-class and then an Abstract
@@ -54,5 +54,36 @@ Developing with TDD has valuable advantages:
 You have a better understanding of a feature you implement.
 You have robust indicators of feature completeness.
 Code is covered with tests and has less chance to be corrupted by fixes or new features.
-The cost of these advantages is pretty high – inconvenience related to switching to a new development manner and time which you spend for developing each new feature. It’s a price of quality.
-So that’s how TDD works – write red unit tests, start implementing a feature, make the tests green, and refactor the code.
+The cost of these advantages is pretty high â€“ inconvenience related to switching to a new development manner and time which you spend for developing each new feature. Itâ€™s a price of quality.
+So thatâ€™s how TDD works â€“ write red unit tests, start implementing a feature, make the tests green, and refactor the code.
+
+
+
+
+The volatile keyword in Java
+
+1 ) The Java volatile keyword as "being stored in main memory". 
+2 ) Only volatile keyowrd used to Object and primitive(byte, short, int, long, char, float, double, boolean) types.
+3 ) An access to a volatile variable never has the potential to block: we're only ever doing a simple read or write, 
+so unlike a synchronized block we will never hold on to any lock;
+
+Important point about volatile:
+1 ) Synchronization in Java is possible by using Java keywords synchronized and volatile and locks.
+2 ) In Java, we can not have synchronized variable. Using synchronized keyword with a variable is illegal 
+    and will result in compilation error. Instead of using the synchronized variable in Java, you can use the java volatile variable,       which will instruct JVM threads to read the value of volatile variable from main memory and donâ€™t cache it locally.
+3 ) If a variable is not shared between multiple threads then there is no need to use the volatile keyword.
+
+Example usage of volatile:
+
+public class Singleton {
+    private static volatile Singleton _instance; // volatile variable
+    public static Singleton getInstance() {
+        if (_instance == null) {
+            synchronized (Singleton.class) {
+                if (_instance == null)
+                    _instance = new Singleton();
+            }
+        }
+        return _instance;
+    }
+}
